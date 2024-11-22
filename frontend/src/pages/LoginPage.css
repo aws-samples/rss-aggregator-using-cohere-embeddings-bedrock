@@ -1,0 +1,111 @@
+.loginForm {
+  width: 660px;
+  height: 400px;
+  margin: auto;
+  background-color: var(--side-bar-color);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 150px;
+  box-shadow: 11px 20px 15px -3px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+  margin-bottom: 20px;
+
+  & button {
+    margin-top: 40px;
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    padding: 0 24px;
+    border-radius: 50px;
+    height: 40px;
+    font-size: 18px;
+    background-color: var(--highlight-color);
+    font-weight: 500;
+    color: #222;
+  }
+
+  & .guestButton { 
+    background-color: var(--faded-bg) !important;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  & h4 {
+    color: var(--font-sidebar);
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 40px;
+  }
+
+  & .sidebar {
+    background-color: var(--highlight-color);
+    border-radius: 0 10px 10px 0px;
+
+    & h4 {
+      color: var(--side-bar-color);
+      font-size: 35px;
+      margin-top: 45px;
+      font-weight: 1000;
+      text-align: center;
+    }
+
+    & button {
+      background-color: var(--faded-bg) !important;
+      font-weight: 500;
+      color: var(--background-color);
+    }
+  }
+
+  & a {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    color: var(--highlight-color);
+    text-decoration: inherit; /* no underline */
+  }
+
+  & .form {
+    & input {
+      width: 80%;
+      padding: 12px 20px;
+      margin: 5px 0;
+      box-sizing: border-box;
+      border-radius: 25px;
+
+      padding: 6px 12px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-clip: padding-box;
+      border: none;
+      appearance: none;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      :focus {
+        color: #212529;
+        background-color: #fff;
+        border-color: #86b7fe;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+      }
+    }
+
+    padding: 0px 20px 20px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  #Logo {
+    font-size: 30px;
+    color: var(--font-sidebar);
+    font-weight: 1000;
+    padding-top: 25px;
+    & span {
+      color: var(--highlight-color);
+    }
+  }
+}

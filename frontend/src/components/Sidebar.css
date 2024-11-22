@@ -1,0 +1,32 @@
+#Sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: var(--side-bar-color);
+  position: sticky;
+  top: 0px;
+}
+
+#Logo {
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  color: var(--font-sidebar);
+  font-weight: 1000;
+  padding-top: 25px;
+  & span {
+    color: var(--highlight-color);
+  }
+}
+
+#Logout { 
+  position: absolute;
+  bottom: 0px;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3px;
+  color: var(--highlight-color);
+  text-decoration: underline;
+  font-size: 0.6em;
+  cursor: pointer;
+}

@@ -1,0 +1,184 @@
+#FeedList {
+  width: 100%;
+  padding: 0px;
+
+  & li {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 400;
+    color: white;
+  }
+
+  & .selected {
+    color: black;
+    background-color: var(--highlight-color);
+  }
+
+  & li:not(.selected) {
+    &:hover {
+      background-color: var(--hover-color);
+    }
+  }
+}
+
+.listItemContent {
+  height: 40px;
+  & .feedName {
+    max-width: 190px;
+    margin-left: 42.5px;
+  }
+}
+
+.listItemContentEditing {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.2);
+  grid-template-columns: 25px auto 60px;
+  height: 40px;
+  & .feedName {
+    max-width: 190px;
+    margin-left: 42.5px;
+  }
+}
+
+.editDots {
+  position: relative;
+  border-radius: 50px;
+  top: -30.5px;
+  left: 245px;
+  height: 20px;
+  width: 20px;
+  line-height: 10px;
+  cursor: pointer;
+  z-index: 20;
+  background-color: var(--hover-color);
+  border: 1px solid var(--selected-color);
+}
+
+.editItems {
+  width: 55px;
+  display: grid;
+  grid-template-columns: 25px 25px;
+  height: 40px;
+  justify-self: right;
+  align-items: center;
+
+  & .cancelEdit {
+    background-color: rgba(177, 4, 4, 0.25);
+    border-radius: 50px;
+    height: 20px;
+    border: 1px solid rgb(177, 4, 4);
+    color: rgba(177, 4, 4);
+    width: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  & .submitEdit {
+    background-color: rgba(20, 149, 3, 0.25);
+    border-radius: 50px;
+    height: 20px;
+    border: 1px solid rgba(20, 149, 3);
+    color: rgba(20, 149, 3);
+    width: 20px;
+    line-height: 25px;
+    cursor: pointer;
+    z-index: 20;
+  }
+}
+
+.editMenu {
+  position: relative;
+  background: white;
+  width: 125px;
+  left: 170px;
+  top: -20px;
+  box-shadow: 5px 8px 9px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: black;
+  z-index: 40;
+
+  & .editMenuItem {
+    font-weight: 1000px;
+  }
+
+  & .editMenuItem:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}
+
+.editMenu:after {
+  content: ''; /* Required to display content */
+  position: absolute; /* Sets the position absolute to the top div */
+  top: 0;
+  left: 86px;
+  margin-left: -15px;
+  margin-top: -15px; /* Set margin equal to border px */
+  width: 0;
+  z-index: 1;
+  height: 0;
+  border-bottom: solid 15px #fff; /* Creates the arrow pointing up, to change to a notch instead user border-top */
+  border-left: solid 15px transparent; /* Creates triangle effect */
+  border-right: solid 15px transparent; /* Creates triangle effect */
+}
+
+.editWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.editFeedName {
+  & input {
+    width: 90%;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid black;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-clip: padding-box;
+    appearance: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    :focus {
+      color: #212529;
+      background-color: #fff;
+      border-color: #86b7fe;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    }
+  }
+}
+
+.editFeedPosition {
+  & .upArrow {
+    position: relative;
+    top: -5px;
+    left: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    padding: 3px;
+  }
+
+  & .downArrow {
+    position: relative;
+    top: 5px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    padding: 3px;
+  }
+}

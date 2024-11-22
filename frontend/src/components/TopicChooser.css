@@ -1,0 +1,332 @@
+#TopicChooser {
+  grid-area: topic;
+  height: 100px;
+  top: 0px;
+  /* overflow: scroll; */
+  white-space: nowrap;
+
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  gap: 5px;
+  grid-template-areas: 'search topicbar';
+}
+
+#TopicBar {
+  position: relative;
+  padding-left: 20px;
+  top: 20px;
+  background: var(--side-bar-color);
+  height: 35px;
+  line-height: 25px;
+  width: calc(100% );
+  font-size: 0.9rem;
+  font-weight: 1000;
+  color: var(--highlight-color);
+  border-radius: 25px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-wrap: nowrap;
+  box-sizing: border-box;
+  word-wrap: nowrap;
+
+  & .arrowContainer { 
+    background-color: var(--side-bar-color);
+    position: absolute;
+
+    width: 25px; 
+    height: 100%; 
+
+    z-index: 1000;
+  }
+
+  & .arrowContainer.left { 
+    left: 15px;
+    width: 10px;
+  }
+
+  & .arrowContainer.right { 
+    right: 0px;
+  }
+
+
+
+  & .leftHidden {
+    position: absolute;
+    border: solid var(--highlight-color);
+    border-width: 0 3px 3px 0;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    padding: 3px;
+    top: 14px
+  }
+
+  & .rightHidden {
+    position: absolute;
+    border: solid var(--highlight-color);
+    border-width: 0 3px 3px 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    padding: 3px;
+    top: 14px;
+  }
+
+  [data-is-overflow='true'] {
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+  }
+
+  & li {
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: inline;
+
+    &.selected {
+      background-color: var(--selected-color);
+    }
+
+    &:not(.selected) {
+      &:hover {
+        background-color: var(--hover-color);
+        cursor: pointer;
+      }
+    }
+
+    &.topicMenu {
+      margin: 0;
+      margin-left: 5px;
+      padding: 3px;
+      padding-left: 4px;
+      padding-right: 4px;
+      line-height: 0px;
+      background-color: var(--hover-color);
+      border: 1px solid var(--selected-color);
+
+      & span {
+        position: relative;
+        top: -3px;
+      }
+    }
+
+    &.topicSpace { 
+      width: 120px;
+    }
+
+    &.topicSpace:hover { 
+      background: none;
+    }
+  }
+}
+
+@media only screen and (width >= 580px) {
+  #TopicContainer {
+    width: 225px;
+  }
+
+  #TopicBar { 
+    min-width: calc(225px - 35px);
+  }
+
+  #ItemContainer { 
+    width: 275px;
+  }
+
+  #SearchBar { 
+    width: 225px;
+  }
+}
+
+@media only screen and (width >= 865px) {
+  #TopicContainer {
+    width: 490px;
+  }
+
+  #TopicBar { 
+    min-width: 515px;
+  }
+
+  #ItemContainer { 
+    width: 560px;
+  }
+
+  #SearchBar { 
+    width: 515px;
+  }
+}
+
+@media only screen and (width >= 1150px) {
+  #TopicContainer {
+    width: 790px;
+  }
+
+  #TopicBar { 
+    min-width: 810px;
+  }
+
+  #ItemContainer { 
+    width: 855px;
+  }
+  
+  #SearchBar { 
+    width: 810px
+  }
+}
+
+@media only screen and (width >= 1435px) {
+  #TopicContainer {
+    width: 1140px;
+  }
+
+  #TopicBar { 
+    min-width: 995px;
+  }
+
+  #ItemContainer { 
+    width: 1140px;
+  }
+
+  #SearchBar { 
+    width: 995px;
+  }
+}
+
+@media only screen and (width >= 1720px) {
+  #TopicContainer {
+    width: 1425px;
+  }
+
+  #TopicBar { 
+    min-width: 1380px;
+  }
+
+  #ItemContainer { 
+    width: 1425px;
+  }
+
+  #SearchBar { 
+    width: 1380px
+  }
+}
+
+#TopicContainer {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 35px;
+}
+
+.topicMenuEdit {
+  position: absolute;
+  background: white;
+  width: 125px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 400;
+  color: white;
+  box-shadow: 5px 8px 9px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: black;
+  z-index: 400;
+
+  & .topicMenuEditItem {
+    font-weight: 1000px;
+    overflow: hidden;
+  }
+
+  & .topicMenuEditItem:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}
+
+.topicMenuEdit:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 0;
+  height: 0;
+  border-bottom: solid 15px #fff; /* Creates the arrow pointing up, to change to a notch instead user border-top */
+  border-left: solid 15px transparent; /* Creates triangle effect */
+  border-right: solid 15px transparent; /* Creates triangle effect */
+}
+
+#Search {
+  position: relative;
+  top: 20px;
+  width: 35px;
+  height: 35px;
+  background: var(--side-bar-color);
+  border-radius: 35px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 40px;
+  fill: var(--highlight-color);
+}
+
+#Search:hover {
+  background: var(--highlight-color);
+  fill: white;
+  cursor: pointer;
+}
+
+#SearchBar {
+  position: relative;
+  top: 20px;
+  background: var(--side-bar-color);
+  height: 35px;
+  line-height: 25px;
+  font-size: 0.9rem;
+  font-weight: 1000;
+  color: var(--highlight-color);
+  border-radius: 25px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-wrap: nowrap;
+  word-wrap: nowrap;
+
+  & #SearchInput {
+    padding-left: 25px;
+    height: 29px;
+    width: calc(100% - 31px);
+    outline: none;
+    border: 2px solid var(--side-bar-color);
+    border-radius: 25px;
+    color: var(--highlight-color);
+    font-weight: 2000;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: bolder;
+    font-size: 1.1rem;
+  }
+
+  & #SearchClose { 
+      position: absolute;
+      margin: 0;
+      top: 5px;
+      width: 25px;
+      height: 25px;
+      font-weight: 1000;
+      text-align: center;
+      right: 5px;
+      color: rgb(255, 255, 255);
+      border-radius: 25px;
+      cursor: pointer;
+  }
+
+  & #SearchTerm { 
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background-color: var(--selected-color);
+  }
+}

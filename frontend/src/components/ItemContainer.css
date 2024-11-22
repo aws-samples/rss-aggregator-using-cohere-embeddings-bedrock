@@ -1,0 +1,79 @@
+#ItemContainer {
+  position: relative;
+  grid-column: 2;
+  display: grid;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--main-bg);
+  grid-auto-rows: min-content;
+  grid-auto-columns: min-content;
+  overflow: scroll;
+  margin: 0 auto 0 auto;
+  z-index: 1;
+}
+
+#ItemContainer::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (width >= 580px) {
+  #ItemContainer {
+    grid-template-areas: 'topic';
+  }
+}
+
+@media only screen and (width >= 865px) {
+  #ItemContainer {
+    grid-template-areas: 'topic topic';
+  }
+}
+
+@media only screen and (width >= 1150px) {
+  #ItemContainer {
+    grid-template-areas: 'topic topic topic';
+  }
+}
+
+@media only screen and (width >= 1435px) {
+  #ItemContainer {
+    grid-template-areas: 'topic topic topic topic';
+  }
+}
+
+@media only screen and (width >= 1720px) {
+  #ItemContainer {
+    grid-template-areas: 'topic topic topic topic topic';
+  }
+}
+
+#LoadingScreen {
+  position: absolute;
+  min-height: 100px;
+  padding: 0;
+  margin: 0;
+
+  top: 100px;
+  z-index: 1000;
+  left: 0;
+
+  width: 100%;
+  height: calc(100% - 100px);
+  text-align: center;
+  backdrop-filter: blur(5px);
+
+  & #LoadingIcon { 
+    margin: auto;
+    animation-name: spin;
+    fill: var(--highlight-color);
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    filter: drop-shadow( 3px 3px 0px rgba(0, 0, 0, .7));
+  }
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}

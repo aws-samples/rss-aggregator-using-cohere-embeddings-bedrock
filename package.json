@@ -1,0 +1,11 @@
+{
+  "name": "rss-aggregator-with-embeddings",
+  "version": "1.0.0",
+  "description": "An RSS application making use of Vector Embeddings",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm run build --prefix ./frontend && npm run deploy --prefix ./infrastructure"
+  },
+  "author": "Thomas Rogers",
+  "license": "MIT-0"
+}

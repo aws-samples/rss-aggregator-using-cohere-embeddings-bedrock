@@ -1,0 +1,5 @@
+umap-learn
+numpy
+pandas
+matplotlib
+boto3

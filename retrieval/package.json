@@ -1,0 +1,53 @@
+{
+  "name": "rss-aggregator-with-embeddings-parser",
+  "version": "0.0.1",
+  "license": "MIT-0",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --files src/index.ts",
+    "lint": "eslint src --ext ts,js,tsx,jsx",
+    "lint:fix": "eslint src --fix --ext ts,js,tsx,jsx",
+    "test:typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "3.614.0",
+    "@aws-sdk/client-sts": "3.614.0",
+    "@aws-sdk/rds-signer": "3.614.0",
+    "aws-lambda": "1.0.7",
+    "axios": "1.7.7",
+    "fast-xml-parser": "4.4.1",
+    "html-to-text": "9.0.5",
+    "jsdom": "24.1.0",
+    "linkedom": "0.16.5",
+    "lodash": "4.17.21",
+    "pg": "8.12.0",
+    "pg-format": "1.0.4",
+    "pgvector": "0.2.0",
+    "postgres": "3.4.4",
+    "rxjs": "7.8.1",
+    "urlsafe-base64": "1.0.0",
+    "uuid": "9.0.1",
+    "voca": "1.4.1"
+  },
+  "devDependencies": {
+    "@types/html-to-text": "9.0.2",
+    "@types/jsdom": "21.1.3",
+    "@types/lodash": "4.14.201",
+    "@types/node": "20.8.4",
+    "@types/pg": "8.11.6",
+    "@types/pg-format": "1.0.5",
+    "@types/urlsafe-base64": "1.0.28",
+    "@types/uuid": "9.0.1",
+    "@types/voca": "1.4.3",
+    "ts-node": "10.9.1",
+    "tslib": "2.6.2",
+    "@typescript-eslint/eslint-plugin": "8.4.0",
+    "@typescript-eslint/parser": "8.4.0",
+    "eslint": "9.9.1",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "nodemon": "3.1.4",
+    "prettier": "3.3.3",
+    "typescript": "5.5.4"
+  }
+}

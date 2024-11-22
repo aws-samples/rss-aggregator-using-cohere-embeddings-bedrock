@@ -1,0 +1,6 @@
+.App {
+  display: grid;
+  grid-template-columns: 275px 1fr;
+  grid-template-rows: 100vh;
+  grid-template-areas: 'sidebar main';
+}

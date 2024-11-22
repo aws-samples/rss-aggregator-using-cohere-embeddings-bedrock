@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+:root { 
+  --side-bar-color: #1a292f;
+  --font-sidebar: #ffffff;
+  --font-sidebar-highlight: black;
+  --highlight-color: #f7ce41;
+  --button-disabled: #887e5d;
+  --main-bg: #c4c2c0;
+  --faded-bg: #e9e7e5;
+  --hover-color: rgba(255,255,255, 0.1);
+  --selected-color: rgba(255,255,255, 0.25);
+}
+
+
+li { 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
