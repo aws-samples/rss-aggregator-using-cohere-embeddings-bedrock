@@ -1,6 +1,6 @@
 # An RSS Aggregator using Cohere Embeddings for Semantic Search, and Classification
 
-### This project is intended for educational purposes only and not for production use. 
+### This project is intended for educational purposes only and not for production use 
 
 ## What is it? 
 
