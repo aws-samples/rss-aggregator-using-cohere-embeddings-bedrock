@@ -11,6 +11,12 @@
   overflow: scroll;
   margin: 0 auto 0 auto;
   z-index: 1;
+
+  @media (max-width:480px)  {
+    grid-column: 2;
+    grid-auto-rows: 1;
+    grid-auto-columns: 1;
+  }
 }
 
 #ItemContainer::-webkit-scrollbar {

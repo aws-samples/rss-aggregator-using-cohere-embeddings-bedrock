@@ -4,6 +4,11 @@
   background-color: var(--side-bar-color);
   position: sticky;
   top: 0px;
+
+  @media (max-width:480px)  {
+    width: 75px;
+    overflow: hidden;
+  }
 }
 
 #Logo {
@@ -15,6 +20,10 @@
   padding-top: 25px;
   & span {
     color: var(--highlight-color);
+  }
+
+  @media (max-width:480px)  {
+    display: none;
   }
 }
 

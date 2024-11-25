@@ -9,6 +9,12 @@
   grid-template-columns: 35px 1fr;
   gap: 5px;
   grid-template-areas: 'search topicbar';
+
+  @media (max-width:480px)  {
+    grid-column: 1;
+    grid-row: 1;
+
+  }
 }
 
 #TopicBar {
@@ -73,7 +79,6 @@
   [data-is-overflow='true'] {
     padding-left: 10px;
     padding-right: 10px;
-    overflow: hidden;
   }
 
   & li {
@@ -218,6 +223,14 @@
   margin: 0;
   padding: 0;
   line-height: 35px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+
+  overflow-x: scroll;
 }
 
 .topicMenuEdit {

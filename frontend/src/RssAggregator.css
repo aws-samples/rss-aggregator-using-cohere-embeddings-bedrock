@@ -3,4 +3,8 @@
   grid-template-columns: 275px 1fr;
   grid-template-rows: 100vh;
   grid-template-areas: 'sidebar main';
+
+  @media (max-width:480px)  {
+    grid-template-columns: 75px 1fr;
+  }
 }

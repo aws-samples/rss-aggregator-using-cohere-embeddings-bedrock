@@ -27,6 +27,10 @@
   & .feedName {
     max-width: 190px;
     margin-left: 42.5px;
+
+    @media (max-width:480px)  {
+      margin-left: 5px;
+    }
   }
 }
 
