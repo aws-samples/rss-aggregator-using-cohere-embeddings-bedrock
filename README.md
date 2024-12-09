@@ -58,6 +58,7 @@ To deploy this application in your own account, you need the following prerequis
 
 * An active AWS account.
 * Model access for Cohere Embed English. On the Amazon Bedrock console, choose Model access in the navigation pane, then choose Manage model access. Select the FMs of your choice and request access.
+![modelselect](./docs/model-select.png)
 
   
 
