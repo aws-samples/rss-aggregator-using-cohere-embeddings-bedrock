@@ -2,6 +2,8 @@
 
 ### This project is intended for educational purposes only and not for production use 
 
+Read the accompanied Blog Post: https://aws.amazon.com/blogs/machine-learning/use-language-embeddings-for-zero-shot-classification-and-semantic-search-with-amazon-bedrock/
+
 ## What is it? 
 
 This application is a complete web application that demonstrates the use of Language Embeddings, namely Cohere V3 Embeddings and Amazon Bedrock to deliver different functionalities. The embeddings are used to quickly categorise articles, allow users to quickly create new topics to categorise articles, and to enable semantic search throughout the articles. 
