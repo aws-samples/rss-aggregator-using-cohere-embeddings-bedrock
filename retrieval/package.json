@@ -19,7 +19,7 @@
     "html-to-text": "9.0.5",
     "jsdom": "24.1.0",
     "linkedom": "0.16.5",
-    "lodash": "4.17.21",
+    "lodash": "4.17.23",
     "pg": "8.12.0",
     "pg-format": "1.0.4",
     "pgvector": "0.2.0",
