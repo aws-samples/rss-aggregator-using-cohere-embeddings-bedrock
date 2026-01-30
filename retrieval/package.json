@@ -15,7 +15,7 @@
     "@aws-sdk/rds-signer": "3.614.0",
     "aws-lambda": "1.0.7",
     "axios": "1.7.7",
-    "fast-xml-parser": "4.4.1",
+    "fast-xml-parser": "5.3.4",
     "html-to-text": "9.0.5",
     "jsdom": "24.1.0",
     "linkedom": "0.16.5",
